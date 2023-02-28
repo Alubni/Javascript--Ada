@@ -476,3 +476,169 @@ jugarPiedraPapelTijera('tijera', 'tijera')  // ¡Empate! }
 //         console.log(jugarPiedraPapelTijera('tijera', 'papel'));
 //         console.log(object);
 //         console.log(object);
+
+// Condicionales y operadores lógicos
+// Ejercicios con operadores lógicos
+// puedeVerPelicula(edad, tieneAutorizacion)
+// Crear una función puedeVerPelicula que tome como argumentos un número edad y un booleano tieneAutorizacion, y devuelva true si la persona está habilitada para ver la película o false si no. Sólo puede ver la película si: tiene 15 años o más, o tiene autorización de sus padres.
+
+// puedeVerPelicula(12, false) // false
+// puedeVerPelicula(12, true)  // true
+// puedeVerPelicula(16, false) // true
+// puedeVerPelicula(18, true)  // true
+// estaEnRango(valor, minimo, maximo)
+
+
+
+// const puedeVerPelicula = (edad, tieneAutorizacion) =>{
+//     if(edad >= 15 || tieneAutorizacion == true){
+//         return "Puede ver pelicula"
+//     }else{
+//         return "No puede ver la pelicula"
+//     }
+
+// }
+// console.log(puedeVerPelicula(14, true));
+// Crear una función estaEnRango que tome como argumentos tres números, un valor, un número minimo y un número maximo, y devuelva true si el valor se encuentra entre los números minimo y maximo o false si no (si el valor es igual a uno de los extremos se considera que está dentro del rango)
+
+// estaEnRango(3, 1, 10)   // true
+// estaEnRango(1, 1, 10)   // true
+// estaEnRango(10, 1, 10)  // true
+// estaEnRango(12, 1, 10)  // false
+// estaEnRango(-3, 1, 10)  // false
+// puedeAvanzar(colorSemaforo)
+// Crear una función puedeAvanzar que tome como argumento un string con el color del semáforo y devuelva true si puede avanzar o false si no. Si no se ingresa un color válido, debe devolver un string que diga: Error: color de semáforo inválido
+
+// puedeAvanzar('verde')     // true
+// puedeAvanzar('amarillo')  // false
+// puedeAvanzar('rojo')      // false
+// puedeAvanzar('lila')      // 'Error: color de semáforo inválido'
+// esVocal(letra)
+// Crear una función esVocal que tome como argumento un string letra y devuelva true si letra es una vocal o false si no lo es.
+
+// esVocal('a') // true
+// esVocal('n') // false
+// esConsonante(letra)
+// Crear una función esConsonante que tome como argumento un string letra y devuelva true si letra es una consonante o false si no lo es
+
+// esVocal('a') // false
+// esVocal('n') // true
+// esHoraValida(hora)
+// Crear una función esHoraValida que tome como argumento un string hora con el formato HH:mm y determine si es una hora válida del día o no
+
+// esHoraValida('12:23') // true
+// esHoraValida('12:65') // false
+// esHoraValida('28:05') // false
+// esHoraValida('00:00') // true
+// puedeRenovarCarnet(pasoTests, tieneMultasImpagas, pagoImpuestos)
+// Crear una función puedeRenovarCarnet que tome como argumentos tres booleanos, pasoTests, tieneMultasImpagas y pagoImpuestos, y devuelva true si una persona está habilitada para renovar su carnet de conducir o false si no. Una persona puede renovar su carnet si pasó los tests, no tiene multas impagas y pagó todos los impuestos
+
+// puedeRenovarCarnet(true, true, true)    // false
+// puedeRenovarCarnet(true, true, false)   // false
+// puedeRenovarCarnet(true, false, true)   // true
+// puedeRenovarCarnet(true, false, false)  // false
+// puedeRenovarCarnet(false, true, true)   // false
+// puedeRenovarCarnet(false, true, false)  // false
+// puedeRenovarCarnet(false, false, true)  // false
+// puedeRenovarCarnet(false, false, false) // false
+// puedeGraduarse(asistencia, materiasAprobadas, tesisAprobada)
+// Crear una función puedeGraduarse que tome como argumentos dos números asistencia y materiasAprobadas y un booleano tesisAprobada, y devuelva true si una persona puede gruadarse o false si no. Una persona puede graduarse si tiene un 75% de asistencia o más, 50 materias aprobadas o más y la tesis aprobada.
+
+// puedeGraduarse(80, 50, true)  // true
+// puedeGraduarse(80, 50, false) // false
+// puedeGraduarse(80, 45, true)  // false
+// puedeGraduarse(80, 45, false) // false
+// puedeGraduarse(65, 50, true)  // false
+// puedeGraduarse(33, 55, false) // false
+// puedeGraduarse(42, 45, true)  // false
+// puedeGraduarse(28, 45, false) // false
+
+
+
+// tienenMismaLongitud(a, b)
+// Crear una función tienenMismaLongitud que tome como argumentos dos strings a y b y devuelva true si tienen la misma longitud o false de lo contrario
+
+// tienenMismaLongitud('javascript', 'java') // false
+// tienenMismaLongitud('manzana', 'cerveza') // true
+
+// const tienenMismaLongitud = (a, b) => {
+//         return  a.length === b.length
+//     }
+
+// console.log(tienenMismaLongitud('javascript', 'java'));
+
+// Crear una función sonIguales que tome como argumentos dos strings a y b y devuelva true si ambos strings tienen el mismo contenido independientes del caso y false en caso contrario.
+
+
+// const sonIguales = (a, b) => {
+//     return a.length===b.length
+// }
+
+// console.log(sonIguales('NO ESTOY GRITANDO', 'ESTOY GRITANDO'));
+// / sonIguales('AdA LoVeLaCe', 'Ada Lovelace') // true
+// // sonIguales() // false
+
+// esContraseniaValida(contrasenia)
+// Crear una función esValida que tome como argumento una contrasenia (string) y devuelva true si tiene 8 caracteres o más o false si tienen menos de 8 caracteres
+
+// const esContraseniaValida = () =>{
+
+// }
+// const ocultarContrasenia = (cont) => {
+//     const str= cont.toString()
+//     return str.replace(/1234567890/gi, "*")
+//   }
+//   console.log(ocultarContrasenia(1234));
+
+// const aprueba = (nota) => {
+//     return nota >= 6 Math.ceil(nota);
+// }
+
+
+// console.log(aprueba(1)) // false
+// console.log(aprueba(5.4)) // false
+// // aprueba(5.5) // true
+// // aprueba(5.6) // true
+// // aprueba(8) // true
+
+
+// obtenerDuracionEnSegundos(duracion)
+// Crear una función obtenerDuracionEnSegundos que tome como argumento un string duracion con el formato (mm:ss) y la cantidad de segundos totales de la duración
+
+// obtenerDuracionEnSegundos('00:33') // 33
+// obtenerDuracionEnSegundos('01:05') // 65
+// obtenerDuracionEnSegundos('10:42') // 642
+
+//  const obtenerDuracionEnSegundos  = (duracion) => {
+//      console.log(typeof(duracion));
+//      let minutos= Number(duracion.slice(0,2))
+
+//      let segundos= Number(duracion.slice(3,5))
+ 
+//      let durSeg= minutos*60 + segundos
+   
+//     return durSeg
+//  }
+
+//  console.log(obtenerDuracionEnSegundos('00:33'))
+// console.log(obtenerDuracionEnSegundos('01:05'));
+
+
+// const ocultarContrasenia = (cont) => {
+//     const str= cont.toString()
+//     return str.replace(/1234567890/gi, "*")
+//   }
+
+// espaciarCaracteres(str)
+// Crear una función espaciarCaracteres que tome como argumento un string str y devuelva un string con todos sus caracteres separados por un espacio
+
+// espaciarCaracteres('javascript') // 'j a v a s c r i p t'
+// espaciarCaracteres('ada lovelace') // 'a d a l o v e l a c e'
+
+
+// const espaciarCaracteres = (str) => {
+//     return str.split(""). join(" ")
+// }
+
+// console.log(espaciarCaracteres('javascript'));
+// console.log(espaciarCaracteres('ada lovelace'));
