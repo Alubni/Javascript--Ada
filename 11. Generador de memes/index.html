@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,78 +9,214 @@
     <link rel="stylesheet" href="styles.css">
     <title>Editor de memes</title>
 </head>
-<body> 
-    <!-- HEADER -->
-    <header>
-        <h1>Generador de Memes</h1>
-        <div>
 
-            <button> <i class="fa-solid fa-image"></i> Imagen</button>
-            <button> <i class="fas fa-font button-icon-text"></i>
-                Texto</button>
-            <button> <i class="fa-regular fa-lightbulb"></i> Modo Oscuro</button>
-            <button></button>
+<body data-theme="light-theme">
+    <!-- Header -->
+    <header class="m-header">
+        <h1>Generador de Memes</h1>
+        <div class="button-container">
+            <button class="imageBtn"> <i class="fa-solid fa-image"></i> Imagen</button>
+            <button class="textBtn"> <i class="fas fa-font button-icon-text"></i>Texto</button>
+            <button class="dark-m"> <i class="fa-solid fa-lightbulb"></i> Modo Oscuro</button>
+            <button class="light-m"> <i class="fa-regular fa-lightbulb"></i> Modo Claro</button>
         </div>
     </header>
-    <div>
-        <main>
-        <div>
-            <p>Top text</p>
-            <div></div>
-            <p>Bottom text</p>
-    </div>
-        <button>Descargar Meme</button>
-        </main>
-    <aside>
-        <input type="color"> </input>
-        <select>Ninguno</select>
-        <select>Aclarar</select>
-        <select>Oscurecer</select>
-        <select>Diferencia</select>
-        <select>Luminosidad</select>
-        <select>Multiplicar</select>
-        <input type="range" id="volume" name="volume"
-         min="0" max="11">
-  <label for="volume">Brillo</label>
-  <input type="range" id="volume" name="volume"
-         min="0" max="11">
-  <label for="volume">Opacidad</label>
-  <input type="range" id="volume" name="volume"
-         min="0" max="11">
-  <label for="volume">Contraste</label>
-  <input type="range" id="volume" name="volume"
-         min="0" max="11">
-  <label for="volume">Desenfoque</label>
-  <input type="range" id="volume" name="volume"
-         min="0" max="11">
-  <label for="volume">Escala de grises</label>
-  <input type="range" id="volume" name="volume"
-         min="0" max="11">
-  <label for="volume">Sepia</label>
-  <input type="range" id="volume" name="volume"
-         min="0" max="11">
-  <label for="volume">HUE</label>
-  <input type="range" id="volume" name="volume"
-         min="0" max="11">
-  <label for="volume">Saturado</label>
-  <input type="range" id="volume" name="volume"
-         min="0" max="11">
-  <label for="volume">Negativo</label>
-
-  <button type="submit">Restablecer filtros</button>
-
-    </aside>
-</div>
+    <!-- Termina el eader -->
+    <!-- Comienza seccion principal -->
+    <main>
+        <section class="meme">
 
 
+            <article class="meme-container">
+                <p class="top-txt">TEXTO SUPERIOR</p>
+                <div class="meme-image"></div>
+                <p class="bottom-txt">TEXTO INFERIOR</p>
+            </article>
+            <!-- Boton de descarga -->
+            <button class="download-btn">Descargar Meme <i class="fas fa-download button-icon-text green-button-icon"
+                    aria-hidden="true"></i></button>
+        </section>
+        <!-- Comienza sección aside -->
+        <aside class="Img-aside">
+            <!--  <button></button> -->
+            <section class="sect-img-aside">
+                <h2>IMAGEN</h2>
+                <div>
+                    <h3>URL</h3>
+                    <input type="text" class="panel-control-input" id="url-img-input" aria-label="URL de imagen">
+                </div>
+                <!-- Fondo y selecctor -->
+                <div>
+                    <h3>FONDO</h3>
+                    <div class="btn-bgd">
+                        <div>
+                            <input aria-label="Color de fondo de imagen" type="color" id="blend-mode-color-input"
+                                value="#FFFFFF">
+                            <span id="blend-mode-color" aria-hidden="true">#FFFFFF</span>
+                        </div>
+                        <div>
+                            <select aria-label="Modo de mezcla de fondo de imagen" id="blend-mode-select"
+                                class="panel-control-input">
+                                <option value="unset">Ninguno</option>
+                                <option value="lighten">Aclarar</option>
+                                <option value="darken">Oscurecer</option>
+                                <option value="difference">Diferencia</option>
+                                <option value="luminosity">Luminosidad</option>
+                                <option value="multiply">Multiplicar</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Filtros imagen -->
+
+                    <div>
+                        <h3>FILTROS</h3>
+
+                        <div class="filter-buttons">
+                            <label for="brightness">Brillo</label>
+                            <input type="range" id="brightness" name="brightness" min="0" max="1" step="0.1" value="1">
+                        </div>
+                        <div class="filter-buttons">
+                            <label for="opacity">Opacidad</label>
+                            <input type="range" id="opacity" name="opacity" min="0" max="1" step="0.1" value="0">
+                        </div>
+                        <div class="filter-buttons">
+                            <label for="contrast">Contraste</label>
+                            <input type="range" id="contrast" name="contrast" min="100" max="1" step="1" value="100">
+                        </div>
+                        <div class="filter-buttons">
+                            <label for="blur">Desenfoque</label>
+                            <input type="range" id="blur" name="blur" min="0" max="10" step="0.1" value="0">
+                        </div>
+                        <div class="filter-buttons">
+                            <label for="greyscale">Escala de grises</label>
+                            <input type="range" id="greyscale" name="greyscale" min="0" max="100" step="1" value="0">
+                        </div>
+                        <div class="filter-buttons">
+                            <label for="sepia">Sepia</label>
+                            <input type="range" id="sepia" name="sepia" min="0" max="100" step="1" value="0">
+                        </div>
+                        <div class="filter-buttons">
+                            <input type="range" id="hue" name="hue" min="0" max="360" step="1" value="0">
+                            <label for="hue">HUE</label>
+                        </div>
+                        <div class="filter-buttons">
+                            <label for="saturatiom">Saturado</label>
+                            <input type="range" id="saturatiom" name="saturatiom" min="100" max="100" step="10"
+                                value="100">
+                        </div>
+                        <div class="filter-buttons">
+                            <label for="invert">Negativo</label>
+                            <input type="range" id="invert" name="invert" min="0" max="1" step="0.1" value="0">
+                        </div>
+
+                        <button type="submit">Restablecer filtros</button>
+            </section>
+        </aside>
+        <!-- Edicion de texto -->
+        <aside class="txt-aside">
+            <div>
+                <h3>TEXTO</h3>
+                <div>
+                    <h3>TEXTO SUPERIOR</h3>
+                    <div class="form-group">
+                        <label for="my-textarea">Text</label>
+                        <textarea id="my-textarea" class="form-control" name="" rows="3"></textarea>
+                        <div class="btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-primary">
+                                <input type="checkbox"> Text
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3>TEXTO INFERIOR</h3>
+                    <div class="form-group">
+                        <label for="my-textarea">Text</label>
+                        <textarea id="my-textarea" class="form-control" name="" rows="3"></textarea>
+                        <div class="btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-primary">
+                                <input type="checkbox"> Text
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <section class="font-selection">
+                    <div>
+                        <h3>FUENTE</h3>
+                        <select aria-label="font" id="font-select" class="font-select">
+                            <option value="">Fantasy</option>
+                            <option value="">Serif</option>
+                            <option value="">Cursive</option>
+                            <option value="">Monospace</option>
+                            <option value="">Georgia</option>
+                            <option value="">Monaco</option>
+                            <option value="">Luminary</option>
+                            <option value="">Verdana</option>
+                            <option value="">Palatino</option>
+                        </select>
+                        <div class="font-align">
+                            <input type="number" name="" id="font-sz">
+
+                            <button><i class="fas fa-align-left" aria-hidden="true"></i></button>
+                            <button><i class="fas fa-align-center" aria-hidden="true"></i></button>
+                            <button><i class="fas fa-align-right" aria-hidden="true"></i></button>
+
+                        </div>
+                        <section>
+                            <div class="font-bgd">
+                                <div>
+                                    <input aria-label="Color de fondo de imagen" type="color"
+                                        id="blend-mode-color-input" value="#FFFFFF">
+                                    <span id="blend-mode-color" aria-hidden="true">COLOR</span>
+                                </div>
+                                <div>
+                                    <input aria-label="Color de fondo de imagen" type="color"
+                                        id="blend-mode-color-input" value="#FFFFFF">
+                                    <span id="blend-mode-color" aria-hidden="true">FONDO</span>
+                                </div>
+                            </div>
+                            <div class="btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-primary">
+                                    <input type="checkbox"> Text
+                                </label>
+                            </div>
+                        </section>
+                </section>
+            </div>
+            </div>
+            <div class="outline-selection">
+                <h3>CONTORNO</h3>
+                <div class="outline-btn">
+                    <button>Ninguno</button>
+                    <button>Claro</button>
+                    <button>Oscuro</button>
+                </div>
+            </div>
+            <div>
+                <h3>ESPACIADO</h3>
+                <input type="number" name="" id="">
+
+            </div>
+            <div class="spacing">
+                <h3>INTERLINEADO</h3>
+                <select name="" id="">
+                    <option value="">0.8</option>
+                    <option value="">1</option>
+                    <option value="">1.2</option>
+                    <option value="">1.5</option>
+                    <option value="">2</option>
+                    <option value="">2.5</option>
+                </select>
+            </div>
+            </div>
+
+        </aside>
 
 
 
-
-
-
-
-    <script  src="app.js"></script>
+    </main>
+    <script src="app.js"></script>
 </body>
 
 </html>

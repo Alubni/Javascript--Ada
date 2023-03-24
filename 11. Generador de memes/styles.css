@@ -1,11 +1,237 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+ * {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+
+ }
+ html {
+   height: 100vh;
+   margin: 0px;
+ }
+
+ :root {
+  --color-header: turquoise;
+  --color-aside: #ADA2FF;
+  --color-meme: #E3E3E3;
+  --color-txt: #b1dfdf;
+  --colorAsideButton: #f7dd76;
+  --colorButtonHover: #F782C2;
+  --mainColorFont: #072448;
+  --color-btn-font: rgb(192, 211, 86);
+  /* --mainFont: 'georgia';
+  --secondFont: 'Open Sans Condensed', sans-serif; */
+  --color-download-btn: #65C18C;
 }
 
-body{
-    background-color: black;
-    color: white;
-    color: rgb(red, green, blue)
+[data-theme="dark-mode"] {
+  --color-header: rgb(63, 80, 80);
+ --color-aside: #3c3761;
+ --color-meme: #9b8484;
+ --color-txt: #1c2c2c;
+ --colorAsideButton: #f7dd76;
+ --colorButtonHover: #F782C2;
+ --mainColorFont: #141f2c;
+ --color-btn-font: rgb(76, 14, 190);
+ /* --mainFont: 'georgia';
+ --secondFont: 'Open Sans Condensed', sans-serif; */
+ --color-download-btn: #860686;
 }
+ 
+ body {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   background-color: #e4e5f1;
+  }
+
+
+ .m-header {
+   width: 100vw;
+   height: auto;
+   padding: 0.rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   background-color: #d2d3db;
+ }
+
+ h1 {
+   padding: 0.2em;
+   color: var(--mainColorFont)
+ }
+
+ .button-container {
+   display: flex;
+   width: auto;
+   justify-content: center;
+   align-items: center;
+
+ }
+
+ .imageBtn,
+ .textBtn,
+ .light-m {
+   display: flex;
+   align-content: space-between;
+   background-color: transparent;
+   border: none;
+   padding: 0.8em;
+
+ }
+
+ .dark-m {
+   display: none;
+ }
+
+
+ .meme {
+   width: 90vw;
+   height: 80vh;
+   background-color: var(--colorSectionMeme);
+   display: flex;
+   flex-grow: 1;
+   flex-direction: column;
+   position: relative;
+   margin: 1em;
+   padding: 0.2em;
+ }
+
+
+ .meme-container {
+   background-color: black;
+   width: 90vw;
+   max-width: 90vw;
+   height: 90%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+ }
+
+ .meme-image {
+   width: 100%;
+   height: 100%;
+   flex-grow: 1;
+   background-size: cover;
+ }
+
+ p {
+   background-color: cornflowerblue;
+
+ }
+
+ .top-txt,
+ .bottom-txt {
+   width: 100%;
+   max-height: fit-content;
+   background-color: var(--color-txt);
+   font-family: var(--mainFont);
+   color: var(--mainColorFont);
+   font-size: 1.5em;
+   font-weight: bolder;
+   text-align: center;
+   padding: 1em;
+ }
+
+ .download-btn {
+   display: inline-block;
+   padding: 0.5rem;
+   color: var(--color-download-btn);
+   background-color:var(--color-btn-font);
+   border: none;
+   border-radius: 0.25rem;
+ }
+
+ 
+ aside .txt-aside {
+   padding: 2em;
+   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+ }
+
+ .Img-aside h2 {
+   margin-top: 0;
+   font-size: 1.25rem;
+   font-weight: bold;
+ }
+
+ .btn-bgd {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+ }
+
+ .sect-img-aside {
+   padding: 1rem;
+   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+ }
+
+ .sect-img-aside {
+   display: flex;
+   flex-direction: column;
+   margin-top: 1rem;
+ }
+
+ .panel-control-input {
+   width: 100%;
+   padding: 0.5rem;
+   border: 1px solid #ccc;
+   border-radius: 0.25rem;
+   font-size: 1rem;
+ }
+
+ .filter-buttons {
+   margin-top: 1rem;
+ }
+
+ .filter-buttons label {
+   margin-right: 1rem;
+ }
+
+ .txt-aside h3 {
+   font-size: 1.25em;
+   justify-content: left;
+   padding: 0.6em;
+ }
+
+ .font-selection {
+   padding: 0.8em;
+   justify-content: left;
+
+ }
+
+ .font-align {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   padding: 0.6em;
+   width: 90%;
+   /* Revisar */
+ }
+
+ #font-sz {
+   font-size: 1em;
+   width: 30%;
+ }
+
+ .font-bgd {
+   display: flex;
+   flex-direction: row;
+ }
+
+ .outline-btn {
+   display: flex;
+   justify-content: space-between;
+   margin: 0.5rem;
+   height: 2rem;
+   width: 80%;
+ }
+
+ .spacing {
+   padding-bottom: 0.6em;
+ }
+
+ 
+  

@@ -1,0 +1,23 @@
+/* div{
+    display: flex;
+    flex-direction: column;
+    width: 2em;
+} */
+
+body{
+    box-sizing: border-box;
+
+}
+p
+{
+    width: 50vw;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+button{
+    width: 40vw;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
