@@ -10,15 +10,16 @@
     <title>Editor de memes</title>
 </head>
 
-<body data-theme="light-theme">
+<body >
     <!-- Header -->
     <header class="m-header">
         <h1>Generador de Memes</h1>
         <div class="button-container">
-            <button class="imageBtn"> <i class="fa-solid fa-image"></i> Imagen</button>
-            <button class="textBtn"> <i class="fas fa-font button-icon-text"></i>Texto</button>
-            <button class="dark-m"> <i class="fa-solid fa-lightbulb"></i> Modo Oscuro</button>
-            <button class="light-m"> <i class="fa-regular fa-lightbulb"></i> Modo Claro</button>
+            <button class="button imageBtn"> <i class="fa-solid fa-image"></i> Imagen</button>
+            <button class="button textBtn"> <i class="fas fa-font button-icon-text"></i>Texto</button>
+            <button class="button dark-btn" id="dark-m"> <i class="fa-solid fa-lightbulb"></i> Modo Oscuro</button>
+            <button class="button light-btn display-none" id="light-m"> <i class="fa-regular fa-lightbulb"></i> Modo Claro</button>
+            
         </div>
     </header>
     <!-- Termina el eader -->
@@ -36,8 +37,9 @@
             <button class="download-btn">Descargar Meme <i class="fas fa-download button-icon-text green-button-icon"
                     aria-hidden="true"></i></button>
         </section>
+        
         <!-- Comienza sección aside -->
-        <aside class="Img-aside">
+        <aside class="Img-aside display-none" id="first-aside">
             <!--  <button></button> -->
             <section class="sect-img-aside">
                 <h2>IMAGEN</h2>
@@ -114,7 +116,7 @@
             </section>
         </aside>
         <!-- Edicion de texto -->
-        <aside class="txt-aside">
+        <aside class="txt-aside display-none" id="second-aside">
             <div>
                 <h3>TEXTO</h3>
                 <div>
@@ -212,6 +214,7 @@
             </div>
 
         </aside>
+
 
 
 

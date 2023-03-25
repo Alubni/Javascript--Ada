@@ -23,7 +23,7 @@
   --color-download-btn: #65C18C;
 }
 
-[data-theme="dark-mode"] {
+body.dark {
   --color-header: rgb(63, 80, 80);
  --color-aside: #3c3761;
  --color-meme: #9b8484;
@@ -70,9 +70,7 @@
 
  }
 
- .imageBtn,
- .textBtn,
- .light-m {
+ .button {
    display: flex;
    align-content: space-between;
    background-color: transparent;
@@ -81,9 +79,9 @@
 
  }
 
- .dark-m {
+ /* #dark-m {
    display: none;
- }
+ } */
 
 
  .meme {
@@ -232,6 +230,8 @@
  .spacing {
    padding-bottom: 0.6em;
  }
-
+.display-none{
+  display:none;
+}
  
-  
+ 
