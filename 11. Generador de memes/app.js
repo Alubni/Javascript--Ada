@@ -108,3 +108,39 @@ const img= $(".meme-image")
 infoUrl.addEventListener("input", (e) => { 
     img.style.backgroundImage= `url(${infoUrl.value})`
 }) 
+
+const topText= $("#top-textarea")
+ const bottomText= $("#bottom-textarea")
+
+
+ topText.addEventListener("keyup", () => {
+    const addedText= topText.value
+    $(".top-txt").innerText= addedText
+ })
+ bottomText.addEventListener("keyup", () =>{
+    const addedBottomtxt= bottomText.value
+    $(".bottom-txt").innerText= addedBottomtxt
+ })
+
+// checkbox sin texto
+ const NotopText= $("#WO-top-txt") 
+ 
+ NotopText.addEventListener("change", () => {
+    if(NotopText.checked){
+        $(".top-txt").classList.add("display-none")
+    }else{
+        $(".top-txt").classList.remove("display-none")
+
+    }
+ })
+
+const NoBottomText= $("#WO-bottom-txt")
+NoBottomText.addEventListener("change", () => {
+    if(NoBottomText.checked){
+        $(".bottom-txt").classList.add("display-none")
+    }else{
+        $(".bottom-txt").classList.remove("display-none")
+
+    }
+ })
+
