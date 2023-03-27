@@ -22,9 +22,20 @@ textBtn.addEventListener("click", ()=>{
 }) 
  
 
+//fondo--
 
 
+    const colorinput= $("#blend-mode-color-input")
+const selection= $("#blend-mode-select")
 
+
+selection.addEventListener("change", () =>{
+    $(".meme-image").style.backgroundBlendMode= selection.value
+})
+
+colorinput.addEventListener("input", ()=>{
+    $(".meme-image").style.backgroundColor= colorinput.value
+})
 
  // modo claro modo oscuro
 const lightButton = $("#light-m")
@@ -52,10 +63,9 @@ const sepia=$("#sepia")
 const hue=$("#hue")
 const saturate=$("#saturate")
 const invert=$("#invert")
+
 const applyFilters= () =>{
     const filters= `brightness(${brightness.value}) opacity(${opacity.value}) contrast(${contrast.value}%) blur(${blur.value}px) grayscale(${grayscale.value}%) sepia(${sepia.value}%) hue-rotate(${hue.value}deg) saturate(${saturate.value}%) invert(${invert.value})`;
-
-
     $(".meme-image").style.filter= filters
 }
 
@@ -74,11 +84,17 @@ invert.addEventListener("input", applyFilters)
 const resetButton= $(".reset-btn")
 
 resetButton.addEventListener("click", () =>{
-    const filters= `brightness(1) opacity(1) contrast(100%) blur(0px) grayscale(0%) sepia(0%) hue-rotate(0deg) saturate(100%) invert(0)`;
+    brightness.value=1
+    opacity.value=1
+    contrast.value=100
+    blur.value=0
+    grayscale.value=0
+    sepia.value=0
+    hue.value=0
+    saturate.value=100
+    invert.value=0
 
-
-    $(".meme-image").style.filter= filters
-
+    applyFilters()
 } )
 
 

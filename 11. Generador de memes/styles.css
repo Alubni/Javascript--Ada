@@ -10,31 +10,26 @@
  }
 
  :root {
-  --color-header: turquoise;
-  --color-aside: #ADA2FF;
-  --color-meme: #E3E3E3;
-  --color-txt: #b1dfdf;
-  --colorAsideButton: #f7dd76;
-  --colorButtonHover: #F782C2;
-  --mainColorFont: #072448;
-  --color-btn-font: rgb(192, 211, 86);
-  /* --mainFont: 'georgia';
-  --secondFont: 'Open Sans Condensed', sans-serif; */
-  --color-download-btn: #65C18C;
+  --color-header: #a1a1a1;
+  --color-aside: #064420;
+  --color-meme: #FDFAF6;
+  --color-txt: #fbfcfa;
+  --mainColorFont: rgb(8, 8, 8);
+  --color-btn-font: #E8EAE6;
+  --color-download-btn: #867AE9;
+  --color-body: #AAAAAA;
 }
 
 body.dark {
-  --color-header: rgb(63, 80, 80);
- --color-aside: #3c3761;
+  --color-header: #0b562a; 
+ --color-aside: #FDFAF6;
  --color-meme: #9b8484;
- --color-txt: #1c2c2c;
- --colorAsideButton: #f7dd76;
- --colorButtonHover: #F782C2;
- --mainColorFont: #141f2c;
- --color-btn-font: rgb(76, 14, 190);
- /* --mainFont: 'georgia';
- --secondFont: 'Open Sans Condensed', sans-serif; */
- --color-download-btn: #860686;
+ --color-txt: #f7faf4;
+ --mainColorFont:rgb(255, 255, 255);
+ --color-btn-font: rgb(243, 241, 245);
+ --color-download-btn: #150347;
+ --color-body: rgb(41 48 48);
+
 }
  
  body {
@@ -43,7 +38,8 @@ body.dark {
    justify-content: center;
    align-items: center;
    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-   background-color: #e4e5f1;
+   background-color: var(--color-body);
+   color:var(--mainColorFont)
   }
 
 
@@ -54,18 +50,19 @@ body.dark {
    display: flex;
    flex-direction: column;
    align-items: center;
-   background-color: #d2d3db;
+   background-color: var(--color-header);
+   color: var(--mainColorFont)
+   
  }
 
  h1 {
    padding: 0.2em;
-   color: var(--mainColorFont)
  }
 
  .button-container {
    display: flex;
    width: auto;
-   justify-content: center;
+   justify-content: space-between;
    align-items: center;
 
  }
@@ -79,28 +76,26 @@ body.dark {
 
  }
 
- /* #dark-m {
-   display: none;
- } */
 
 
  .meme {
-   width: 90vw;
-   height: 80vh;
-   background-color: var(--colorSectionMeme);
-   display: flex;
-   flex-grow: 1;
-   flex-direction: column;
-   position: relative;
-   margin: 1em;
-   padding: 0.2em;
+  width: 90vw; 
+  height: 80vh;
+  background-color: var(--colorSectionMeme);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 1em;
+  padding: 0.2em;
  }
 
 
  .meme-container {
    background-color: black;
-   width: 90vw;
-   max-width: 90vw;
+   width: 30em;
+   max-width: 37.8em;
    height: 90%;
    display: flex;
    flex-direction: column;
@@ -116,10 +111,7 @@ body.dark {
    background-size: cover;
  }
 
- p {
-   background-color: cornflowerblue;
 
- }
 
  .top-txt,
  .bottom-txt {
@@ -127,32 +119,23 @@ body.dark {
    max-height: fit-content;
    background-color: var(--color-txt);
    font-family: var(--mainFont);
-   color: var(--mainColorFont);
    font-size: 1.5em;
    font-weight: bolder;
    text-align: center;
    padding: 1em;
+   color:black
  }
 
  .download-btn {
-   display: inline-block;
+   width: 10em;
+   display: flex;
+   align-items: center;
+   justify-items: center;
    padding: 0.5rem;
-   color: var(--color-download-btn);
-   background-color:var(--color-btn-font);
+   color: var(--color-btn-font);
+   background-color:var(--color-download-btn);                                 
    border: none;
-   border-radius: 0.25rem;
- }
-
- 
- aside .txt-aside {
-   padding: 2em;
-   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
- }
-
- .Img-aside h2 {
-   margin-top: 0;
-   font-size: 1.25rem;
-   font-weight: bold;
+   border-radius: 0.25rem; 
  }
 
  .btn-bgd {
@@ -161,17 +144,27 @@ body.dark {
    justify-content: space-evenly;
  }
 
- .sect-img-aside {
-   padding: 1rem;
-   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
- }
-
- .sect-img-aside {
-   display: flex;
+ .Img-aside,
+ .txt-aside{
+  position: absolute;
+  top:0;
+  right:0;
+  width: 15.5em;  
+  height: 100vh;
+  display: flex;
    flex-direction: column;
-   margin-top: 1rem;
+   padding: 1em;
+   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+   background-color: var(--color-body);
  }
 
+
+h2{
+  font-size: 1.2em;
+}
+h3{
+  font-size: 1em;
+}
  .panel-control-input {
    width: 100%;
    padding: 0.5rem;
@@ -179,20 +172,23 @@ body.dark {
    border-radius: 0.25rem;
    font-size: 1rem;
  }
+ label{
+  display: block;
+  font-size: 0.8em;
+  margin: 0.1em;
+ }
+ input[type="range"]{
+  width: 100%;
+ }
 
- .filter-buttons {
+/*  .filter-buttons {
    margin-top: 1rem;
  }
 
  .filter-buttons label {
    margin-right: 1rem;
  }
-
- .txt-aside h3 {
-   font-size: 1.25em;
-   justify-content: left;
-   padding: 0.6em;
- }
+ */
 
  .font-selection {
    padding: 0.8em;
@@ -234,4 +230,8 @@ body.dark {
   display:none;
 }
  
- 
+/*  @media (min-width: 1200px){
+  .meme-container{
+    max-width: 30em;
+  }
+ } */
