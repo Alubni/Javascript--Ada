@@ -46,7 +46,6 @@ body.dark {
  .m-header {
    width: 100vw;
    height: auto;
-   padding: 0.rem;
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -131,11 +130,11 @@ body.dark {
    display: flex;
    align-items: center;
    justify-items: center;
-   padding: 0.5rem;
+   padding: 0.5em;
    color: var(--color-btn-font);
    background-color:var(--color-download-btn);                                 
    border: none;
-   border-radius: 0.25rem; 
+   border-radius: 0.25em; 
  }
 
  .btn-bgd {
@@ -167,10 +166,10 @@ h3{
 }
  .panel-control-input {
    width: 100%;
-   padding: 0.5rem;
+   padding: 0.5em;
    border: 1px solid #ccc;
-   border-radius: 0.25rem;
-   font-size: 1rem;
+   border-radius: 0.25em;
+   font-size: 1em;
  }
  label{
   display: block;
@@ -209,8 +208,8 @@ h3{
  .outline-btn {
    display: flex;
    justify-content: space-between;
-   margin: 0.5rem;
-   height: 2rem;
+   margin: 0.5em;
+   height: 2em;
    width: 80%;
  }
 
@@ -221,8 +220,3 @@ h3{
   display:none;
 }
  
-/*  @media (min-width: 1200px){
-  .meme-container{
-    max-width: 30em;
-  }
- } */

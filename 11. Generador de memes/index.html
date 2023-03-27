@@ -9,11 +9,10 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
-
     <title>Editor de memes</title>
 </head>
 
-<body >
+<body>
     <!-- Header -->
     <header class="m-header">
         <h1>Generador de Memes</h1>
@@ -21,16 +20,13 @@
             <button class="button imageBtn"> <i class="fa-solid fa-image"></i> Imagen</button>
             <button class="button textBtn"> <i class="fas fa-font button-icon-text"></i>Texto</button>
             <button class="button dark-btn" id="dark-m"> <i class="fa-solid fa-lightbulb"></i> Modo Oscuro</button>
-            <button class="button light-btn display-none" id="light-m"> <i class="fa-regular fa-lightbulb"></i> Modo Claro</button>
-            
+            <button class="button light-btn display-none" id="light-m"> <i class="fa-regular fa-lightbulb"></i> Modo
+                Claro</button>
         </div>
     </header>
-    <!-- Termina el eader -->
     <!-- Comienza seccion principal -->
     <main>
         <section class="meme">
-
-
             <article class="meme-container">
                 <p class="top-txt">TEXTO SUPERIOR</p>
                 <div class="meme-image"></div>
@@ -40,7 +36,7 @@
             <button class="download-btn">Descargar Meme <i class="fas fa-download button-icon-text green-button-icon"
                     aria-hidden="true"></i></button>
         </section>
-        
+
         <!-- Comienza sección aside -->
         <aside class="Img-aside display-none" id="first-aside">
             <!--  <button></button> -->
@@ -102,9 +98,9 @@
                             <input type="range" id="sepia" name="sepia" min="0" max="100" step="1" value="0">
                         </div>
                         <div class="filter-buttons">
-                             <label for="hue">HUE</label>
-                             <input type="range" id="hue" name="hue" min="0" max="360" step="1" value="0">
-                           
+                            <label for="hue">HUE</label>
+                            <input type="range" id="hue" name="hue" min="0" max="360" step="1" value="0">
+
                         </div>
                         <div class="filter-buttons">
                             <label for="saturate">Saturado</label>
@@ -126,7 +122,7 @@
                 <div>
                     <h3>TEXTO SUPERIOR</h3>
                     <div class="form-group">
-                       
+
                         <textarea id="top-textarea" class="form-control" name="" rows="3"></textarea>
                         <div class="btn-group-toggle" data-toggle="buttons">
                             <label class="btn btn-primary">
@@ -150,19 +146,19 @@
                     <div>
                         <h3>FUENTE</h3>
                         <select aria-label="font" id="font-select" class="font-select">
-                            <option value="">Fantasy</option>
-                            <option value="">Serif</option>
-                            <option value="">Cursive</option>
-                            <option value="">Monospace</option>
-                            <option value="">Georgia</option>
-                            <option value="">Monaco</option>
-                            <option value="">Luminary</option>
-                            <option value="">Verdana</option>
-                            <option value="">Palatino</option>
+                            <option value="Fantasy">Fantasy</option>
+                            <option value="Serif">Serif</option>
+                            <option value="Cursive">Cursive</option>
+                            <option value="Monospace">Monospace</option>
+                            <option value="Georgia">Georgia</option>
+                            <option value="Monaco">Monaco</option>
+                            <option value="Luminary">Luminary</option>
+                            <option value="Verdana">Verdana</option>
+                            <option value="Palatino">Palatino</option>
                         </select>
                         <div class="font-align">
-                            <input type="number" name="" id="font-sz">
-
+                            <input type="number" name="Tamaño de fuente" aria-label="Tamaño de fuente"
+                                class="input-container" id="font-sz" min="12" value="30" />
                             <button><i class="fas fa-align-left" aria-hidden="true"></i></button>
                             <button><i class="fas fa-align-center" aria-hidden="true"></i></button>
                             <button><i class="fas fa-align-right" aria-hidden="true"></i></button>

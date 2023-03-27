@@ -1,52 +1,48 @@
 
 const $ = (selector) => document.querySelector(selector);
 
- //boton imagen
-const imageBtn= $(".imageBtn")
-const textBtn= $(".textBtn")
+//boton imagen
+const imageBtn = $(".imageBtn")
+const textBtn = $(".textBtn")
 
-const imageAside= $("#first-aside")
-const textAside= $("#second-aside")
- const aside= document.querySelectorAll("aside")
- imageBtn.addEventListener("click", ()=>{
+const imageAside = $("#first-aside")
+const textAside = $("#second-aside")
+
+const aside = document.querySelectorAll("aside")
+imageBtn.addEventListener("click", () => {
     textAside.classList.add("display-none")
     imageAside.classList.remove("display-none")
- 
 })
-textBtn.addEventListener("click", ()=>{
-   
+
+textBtn.addEventListener("click", () => {
     textAside.classList.remove("display-none")
     imageAside.classList.add("display-none")
+})
 
- 
-}) 
- 
 
 //fondo
+const colorinput = $("#blend-mode-color-input")
+const selection = $("#blend-mode-select")
 
 
-    const colorinput= $("#blend-mode-color-input")
-const selection= $("#blend-mode-select")
-
-
-selection.addEventListener("change", () =>{
-    $(".meme-image").style.backgroundBlendMode= selection.value
+selection.addEventListener("change", () => {
+    $(".meme-image").style.backgroundBlendMode = selection.value
 })
 
-colorinput.addEventListener("input", ()=>{
-    $(".meme-image").style.backgroundColor= colorinput.value
+colorinput.addEventListener("input", () => {
+    $(".meme-image").style.backgroundColor = colorinput.value
 })
 
- // modo claro modo oscuro
+// modo claro modo oscuro
 const lightButton = $("#light-m")
 const darkButton = $("#dark-m")
-lightButton.addEventListener("click", ()=>{
+lightButton.addEventListener("click", () => {
     lightButton.classList.add("display-none")
     darkButton.classList.remove("display-none")
     document.body.classList.remove("dark")
 });
 
-darkButton.addEventListener("click", ()=>{
+darkButton.addEventListener("click", () => {
     lightButton.classList.remove('display-none')
     darkButton.classList.add("display-none")
     document.body.classList.add("dark")
@@ -54,19 +50,19 @@ darkButton.addEventListener("click", ()=>{
 
 // filtros
 
-const brightness=$("#brightness")
-const opacity=$("#opacity" )
-const contrast=$("#contrast" )
-const blur=$("#blur")
-const grayscale=$("#grayscale")
-const sepia=$("#sepia")
-const hue=$("#hue")
-const saturate=$("#saturate")
-const invert=$("#invert")
+const brightness = $("#brightness")
+const opacity = $("#opacity")
+const contrast = $("#contrast")
+const blur = $("#blur")
+const grayscale = $("#grayscale")
+const sepia = $("#sepia")
+const hue = $("#hue")
+const saturate = $("#saturate")
+const invert = $("#invert")
 
-const applyFilters= () =>{
-    const filters= `brightness(${brightness.value}) opacity(${opacity.value}) contrast(${contrast.value}%) blur(${blur.value}px) grayscale(${grayscale.value}%) sepia(${sepia.value}%) hue-rotate(${hue.value}deg) saturate(${saturate.value}%) invert(${invert.value})`;
-    $(".meme-image").style.filter= filters
+const applyFilters = () => {
+    const filters = `brightness(${brightness.value}) opacity(${opacity.value}) contrast(${contrast.value}%) blur(${blur.value}px) grayscale(${grayscale.value}%) sepia(${sepia.value}%) hue-rotate(${hue.value}deg) saturate(${saturate.value}%) invert(${invert.value})`;
+    $(".meme-image").style.filter = filters
 }
 
 brightness.addEventListener("input", applyFilters)
@@ -81,76 +77,98 @@ invert.addEventListener("input", applyFilters)
 
 
 // reseatear filtros
-const resetButton= $(".reset-btn")
+const resetButton = $(".reset-btn")
 
-resetButton.addEventListener("click", () =>{
-    brightness.value=1
-    opacity.value=1
-    contrast.value=100
-    blur.value=0
-    grayscale.value=0
-    sepia.value=0
-    hue.value=0
-    saturate.value=100
-    invert.value=0
+resetButton.addEventListener("click", () => {
+    brightness.value = 1
+    opacity.value = 1
+    contrast.value = 100
+    blur.value = 0
+    grayscale.value = 0
+    sepia.value = 0
+    hue.value = 0
+    saturate.value = 100
+    invert.value = 0
 
     applyFilters()
-} )
-
-
-
+})
 
 
 // Url como background
-const infoUrl= $("#url-img-input")
-const img= $(".meme-image")
+const infoUrl = $("#url-img-input")
+const img = $(".meme-image")
 
-infoUrl.addEventListener("input", (e) => { 
-    img.style.backgroundImage= `url(${infoUrl.value})`
-}) 
+infoUrl.addEventListener("input", () => {
+    img.style.backgroundImage = `url(${infoUrl.value})`
+})
 
-const topText= $("#top-textarea")
- const bottomText= $("#bottom-textarea")
+const topText = $("#top-textarea")
+const bottomText = $("#bottom-textarea")
 
 
- topText.addEventListener("keyup", () => {
-    const addedText= topText.value
-    $(".top-txt").innerText= addedText
- })
- bottomText.addEventListener("keyup", () =>{
-    const addedBottomtxt= bottomText.value
-    $(".bottom-txt").innerText= addedBottomtxt
- })
+topText.addEventListener("keyup", () => {
+    const addedText = topText.value
+    $(".top-txt").innerText = addedText
+})
+bottomText.addEventListener("keyup", () => {
+    const addedBottomtxt = bottomText.value
+    $(".bottom-txt").innerText = addedBottomtxt
+})
 
 // checkbox sin texto
- const NotopText= $("#WO-top-txt") 
- 
- NotopText.addEventListener("change", () => {
-    if(NotopText.checked){
+const NotopText = $("#WO-top-txt")
+
+NotopText.addEventListener("change", () => {
+    if (NotopText.checked) {
         $(".top-txt").classList.add("display-none")
-    }else{
+    } else {
         $(".top-txt").classList.remove("display-none")
 
     }
- })
+})
 
-const NoBottomText= $("#WO-bottom-txt")
+const NoBottomText = $("#WO-bottom-txt")
 NoBottomText.addEventListener("change", () => {
-    if(NoBottomText.checked){
+    if (NoBottomText.checked) {
         $(".bottom-txt").classList.add("display-none")
-    }else{
+    } else {
         $(".bottom-txt").classList.remove("display-none")
 
     }
- })
+})
 
- //boton de descarga
-  const downloadMeme = () => {
+//boton de descarga
+const downloadMeme = () => {
     domtoimage.toBlob($(".meme-container")
     ).then((blob) => {
         saveAs(blob, "mi-meme.png")
-      })
+    })
 }
 
-$(".download-btn").addEventListener("click", downloadMeme) 
+$(".download-btn").addEventListener("click", downloadMeme)
+
+//seleccionar letra
+const changeFontTop = $("#font-select")
+changeFontTop.addEventListener("input", () => {
+    $(".top-txt").style.fontFamily = changeFontTop.value
+})
+
+const changeFontBottom = $("#font-select")
+changeFontBottom.addEventListener("input", () => {
+    $(".bottom-txt").style.fontFamily = changeFontBottom.value
+})
+//seleccionar tamanio
+
+
+const inputNewSize = $("#font-sz")
+
+inputNewSize.addEventListener("input", () => {
+    const newFontSize = inputNewSize.value
+    $(".top-txt").style.fontSize = `${newFontSize}px`
+})
+inputNewSize.addEventListener("input", () => {
+    const newFontSize = inputNewSize.value
+    $(".bottom-txt").style.fontSize = `${newFontSize}px`
+
+})
 
