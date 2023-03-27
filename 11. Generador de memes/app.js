@@ -1,7 +1,7 @@
 
 const $ = (selector) => document.querySelector(selector);
 
- ///boton imagen
+ //boton imagen
 const imageBtn= $(".imageBtn")
 const textBtn= $(".textBtn")
 
@@ -22,7 +22,7 @@ textBtn.addEventListener("click", ()=>{
 }) 
  
 
-//fondo--
+//fondo
 
 
     const colorinput= $("#blend-mode-color-input")
@@ -143,4 +143,14 @@ NoBottomText.addEventListener("change", () => {
 
     }
  })
+
+ //boton de descarga
+  const downloadMeme = () => {
+    domtoimage.toBlob($(".meme-container")
+    ).then((blob) => {
+        saveAs(blob, "mi-meme.png")
+      })
+}
+
+$(".download-btn").addEventListener("click", downloadMeme) 
 
