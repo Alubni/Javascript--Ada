@@ -11,24 +11,35 @@
 
  :root {
   --color-header: #a1a1a1;
-  --color-aside: #064420;
+  --color-aside: #dddde0;
   --color-meme: #FDFAF6;
   --color-txt: #fbfcfa;
   --mainColorFont: rgb(8, 8, 8);
   --color-btn-font: #E8EAE6;
-  --color-download-btn: #867AE9;
+  --color-download-btn: #210bec;
   --color-body: #AAAAAA;
+  --color-reserButton: rgb(204, 200, 200);
+  --color--downloadHover: #4e8ad8;
+  --color--resetbtnbackground: rgb(180, 177, 177);
+  --color--resetButtonHover: #e1e4de;
+
+  
+
 }
 
 body.dark {
   --color-header: #0b562a; 
- --color-aside: #FDFAF6;
+ --color-aside: #19191a;
  --color-meme: #9b8484;
  --color-txt: #f7faf4;
  --mainColorFont:rgb(255, 255, 255);
  --color-btn-font: rgb(243, 241, 245);
  --color-download-btn: #150347;
  --color-body: rgb(41 48 48);
+ --color--downloadHover: #052044;
+ --color--resetbtnbackground: rgb(41, 39, 39);
+ --color--resetButtonHover: #373837;
+
 
 }
  
@@ -72,8 +83,16 @@ body.dark {
    background-color: transparent;
    border: none;
    padding: 0.8em;
-
+   
  }
+
+ .button:hover{
+  cursor: pointer;
+ border: black solid 0.2em;
+ border-radius: 8%;
+ flex-grow: 2;
+ box-shadow: 19px 23px 36px -11px rgba(107,100,100,0.72);
+}
 
 
 
@@ -106,8 +125,8 @@ body.dark {
  .meme-image {
    width: 100%;
    height: 100%;
-   flex-grow: 1;
    background-size: cover;
+   background-position: center ;
  }
 
 
@@ -126,17 +145,30 @@ body.dark {
  }
 
  .download-btn {
-   width: 10em;
+   width: 11em;
    display: flex;
    align-items: center;
    justify-items: center;
-   padding: 0.5em;
+   padding: 0.7em;
    color: var(--color-btn-font);
    background-color:var(--color-download-btn);                                 
    border: none;
-   border-radius: 0.25em; 
+   border-radius: 0.9em; 
+   margin: 0.6em;
+   box-shadow: 19px 23px 36px -11px rgba(107,100,100,0.72);
+
+ }
+ .download-btn i{
+  padding-left: 0.4em;
  }
 
+ .download-btn:hover{
+  cursor: pointer;
+  background-color: var(--color--downloadHover);
+ }
+button i{
+  padding-right: 0.4em;
+}
  .btn-bgd {
    display: flex;
    flex-direction: row;
@@ -154,7 +186,7 @@ body.dark {
    flex-direction: column;
    padding: 1em;
    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
-   background-color: var(--color-body);
+   background-color: var(--color-aside);
  }
 
 
@@ -178,6 +210,19 @@ h3{
  }
  input[type="range"]{
   width: 100%;
+ }
+ .reset-btn{
+  align-content: space-between;
+   background-color: var(--color--resetbtnbackground);
+   border: rgb(197, 192, 192) solid 0.1em;
+   border-radius: 0.4em;
+   padding: 0.8em;
+   margin-top: 0.6em;
+   color: var(--mainFont)
+ }
+
+ .reset-btn:hover{
+  background-color: var(--color--resetButtonHover);
  }
 
  .font-selection {

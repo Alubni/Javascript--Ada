@@ -49,7 +49,6 @@ darkButton.addEventListener("click", () => {
 })
 
 // filtros
-
 const brightness = $("#brightness")
 const opacity = $("#opacity")
 const contrast = $("#contrast")
@@ -93,7 +92,6 @@ resetButton.addEventListener("click", () => {
     applyFilters()
 })
 
-
 // Url como background
 const infoUrl = $("#url-img-input")
 const img = $(".meme-image")
@@ -123,7 +121,6 @@ NotopText.addEventListener("change", () => {
         $(".top-txt").classList.add("display-none")
     } else {
         $(".top-txt").classList.remove("display-none")
-
     }
 })
 
@@ -157,9 +154,9 @@ const changeFontBottom = $("#font-select")
 changeFontBottom.addEventListener("input", () => {
     $(".bottom-txt").style.fontFamily = changeFontBottom.value
 })
+
+
 //seleccionar tamanio
-
-
 const inputNewSize = $("#font-sz")
 
 inputNewSize.addEventListener("input", () => {
@@ -170,5 +167,54 @@ inputNewSize.addEventListener("input", () => {
     const newFontSize = inputNewSize.value
     $(".bottom-txt").style.fontSize = `${newFontSize}px`
 
+})
+
+
+//botones de alineado
+const alignCenterB= $(".align-left")
+const alignLeftB= $(".align-center")
+const alignRightB= $(".align-right")
+
+alignCenterB.addEventListener("click", ()=>{
+    $(".top-txt").style.textAlign = "center"
+})
+
+alignLeftB.addEventListener("click", ()=>{
+    $(".top-txt").style.textAlign = "left"
+})
+
+alignRightB.addEventListener("click", ()=>{
+    $(".top-txt").style.textAlign = "right"
+})
+
+alignCenterB.addEventListener("click", ()=> {
+    $(".bottom-txt").style.textAlign = "center"
+})
+
+alignLeftB.addEventListener("click", ()=> {
+    $(".bottom-txt").style.textAlign = "left"
+})
+
+alignRightB.addEventListener("click", ()=> {
+    $(".bottom-txt").style.textAlign = "right"
+})
+
+//cambiar text color superior e inferior
+const changeTextColor= $("#txt-color")
+const changeBgdColor= $("#bgd-color")
+
+changeTextColor.addEventListener("input", ()=> {
+    $(".top-txt").style.color = changeTextColor.value
+})
+changeTextColor.addEventListener("input", ()=> {
+    $(".bottom-txt").style.color = changeTextColor.value
+})
+
+//cambiar color de fondo
+changeBgdColor.addEventListener("input", () => {
+    $(".top-txt").style.backgroundColor= changeBgdColor.value
+})
+changeBgdColor.addEventListener("input", () => {
+    $(".bottom-txt").style.backgroundColor= changeBgdColor.value
 })
 
