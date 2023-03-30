@@ -72,12 +72,13 @@ hue.addEventListener("input", updateImageFilters)
 saturate.addEventListener("input", updateImageFilters)
 invert.addEventListener("input", updateImageFilters)
 
+
 // reseatear filtros
 const resetButton = $(".reset-btn")
 
 resetButton.addEventListener("click", () => {
     brightness.value = 1
-    opacity.value = 0
+    opacity.value = 1
     contrast.value = 100
     blur.value = 0
     grayscale.value = 0
@@ -267,3 +268,4 @@ padding.addEventListener("click", () => {
     $(".top-txt").style.padding = `${padding.value}px`
     $(".bottom-txt").style.padding = `${padding.value}px`
 })
+
