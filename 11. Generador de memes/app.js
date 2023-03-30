@@ -59,20 +59,40 @@ const hue = $("#hue")
 const saturate = $("#saturate")
 const invert = $("#invert")
 
-const applyFilters = () => {
-    const filters = `brightness(${brightness.value}) opacity(${opacity.value}) contrast(${contrast.value}%) blur(${blur.value}px) grayscale(${grayscale.value}%) sepia(${sepia.value}%) hue-rotate(${hue.value}deg) saturate(${saturate.value}%) invert(${invert.value})`;
-    $(".meme-image").style.filter = filters
-}
+brightness.addEventListener("input", () => {
+    document.querySelector(".meme-image").style.filter = `brightness(${brightness.value}) opacity(${opacity.value}) contrast(${contrast.value}%) blur(${blur.value}px) grayscale(${grayscale.value}%) sepia(${sepia.value}%) hue-rotate(${hue.value}deg) saturate(${saturate.value}%) invert(${invert.value})`;
+});
 
-brightness.addEventListener("input", applyFilters)
-opacity.addEventListener("input", applyFilters)
-contrast.addEventListener("input", applyFilters)
-blur.addEventListener("input", applyFilters)
-grayscale.addEventListener("input", applyFilters)
-sepia.addEventListener("input", applyFilters)
-hue.addEventListener("input", applyFilters)
-saturate.addEventListener("input", applyFilters)
-invert.addEventListener("input", applyFilters)
+opacity.addEventListener("input", () => {
+    document.querySelector(".meme-image").style.filter = `brightness(${brightness.value}) opacity(${opacity.value}) contrast(${contrast.value}%) blur(${blur.value}px) grayscale(${grayscale.value}%) sepia(${sepia.value}%) hue-rotate(${hue.value}deg) saturate(${saturate.value}%) invert(${invert.value})`;
+});
+
+contrast.addEventListener("input", () => {
+    document.querySelector(".meme-image").style.filter = `brightness(${brightness.value}) opacity(${opacity.value}) contrast(${contrast.value}%) blur(${blur.value}px) grayscale(${grayscale.value}%) sepia(${sepia.value}%) hue-rotate(${hue.value}deg) saturate(${saturate.value}%) invert(${invert.value})`;
+});
+
+blur.addEventListener("input", () => {
+    document.querySelector(".meme-image").style.filter = `brightness(${brightness.value}) opacity(${opacity.value}) contrast(${contrast.value}%) blur(${blur.value}px) grayscale(${grayscale.value}%) sepia(${sepia.value}%) hue-rotate(${hue.value}deg) saturate(${saturate.value}%) invert(${invert.value})`;
+});
+
+grayscale.addEventListener("input", () => {
+    document.querySelector(".meme-image").style.filter = `brightness(${brightness.value}) opacity(${opacity.value}) contrast(${contrast.value}%) blur(${blur.value}px) grayscale(${grayscale.value}%) sepia(${sepia.value}%) hue-rotate(${hue.value}deg) saturate(${saturate.value}%) invert(${invert.value})`;
+});
+
+sepia.addEventListener("input", () => {
+    document.querySelector(".meme-image").style.filter = `brightness(${brightness.value}) opacity(${opacity.value}) contrast(${contrast.value}%) blur(${blur.value}px) grayscale(${grayscale.value}%) sepia(${sepia.value}%) hue-rotate(${hue.value}deg) saturate(${saturate.value}%) invert(${invert.value})`;
+});
+
+hue.addEventListener("input", () => {
+    document.querySelector(".meme-image").style.filter = `brightness(${brightness.value}) opacity(${opacity.value}) contrast(${contrast.value}%) blur(${blur.value}px) grayscale(${grayscale.value}%) sepia(${sepia.value}%) hue-rotate(${hue.value}deg) saturate(${saturate.value}%) invert(${invert.value})`;
+});
+
+saturate.addEventListener("input", () => {
+    document.querySelector(".meme-image").style.filter = `brightness(${brightness.value}) opacity(${opacity.value}) contrast(${contrast.value}%) blur(${blur.value}px) grayscale(${grayscale.value}%) sepia(${sepia.value}%) hue-rotate(${hue.value}deg) saturate(${saturate.value}%) invert(${invert.value})`;
+});
+invert.addEventListener("input", () => {
+    document.querySelector(".meme-image").style.filter = `brightness(${brightness.value}) opacity(${opacity.value}) contrast(${contrast.value}%) blur(${blur.value}px) grayscale(${grayscale.value}%) sepia(${sepia.value}%) hue-rotate(${hue.value}deg) saturate(${saturate.value}%) invert(${invert.value})`;
+});
 
 
 // reseatear filtros
@@ -80,7 +100,7 @@ const resetButton = $(".reset-btn")
 
 resetButton.addEventListener("click", () => {
     brightness.value = 1
-    opacity.value = 1
+    opacity.value = 0
     contrast.value = 100
     blur.value = 0
     grayscale.value = 0
@@ -89,8 +109,9 @@ resetButton.addEventListener("click", () => {
     saturate.value = 100
     invert.value = 0
 
-    applyFilters()
-})
+    $(".meme-image").style.filter = `brightness(${brightness.value}) opacity(${opacity.value}) contrast(${contrast.value}%) blur(${blur.value}px) grayscale(${grayscale.value}%) sepia(${sepia.value}%) hue-rotate(${hue.value}deg) saturate(${saturate.value}%) invert(${invert.value})`;
+});
+
 
 // Url como background
 const infoUrl = $("#url-img-input")
@@ -171,50 +192,68 @@ inputNewSize.addEventListener("input", () => {
 
 
 //botones de alineado
-const alignCenterB= $(".align-left")
-const alignLeftB= $(".align-center")
-const alignRightB= $(".align-right")
+const alignCenterB = $(".align-left")
+const alignLeftB = $(".align-center")
+const alignRightB = $(".align-right")
 
-alignCenterB.addEventListener("click", ()=>{
+alignCenterB.addEventListener("click", () => {
     $(".top-txt").style.textAlign = "center"
 })
 
-alignLeftB.addEventListener("click", ()=>{
+alignLeftB.addEventListener("click", () => {
     $(".top-txt").style.textAlign = "left"
 })
 
-alignRightB.addEventListener("click", ()=>{
+alignRightB.addEventListener("click", () => {
     $(".top-txt").style.textAlign = "right"
 })
 
-alignCenterB.addEventListener("click", ()=> {
+alignCenterB.addEventListener("click", () => {
     $(".bottom-txt").style.textAlign = "center"
 })
 
-alignLeftB.addEventListener("click", ()=> {
+alignLeftB.addEventListener("click", () => {
     $(".bottom-txt").style.textAlign = "left"
 })
 
-alignRightB.addEventListener("click", ()=> {
+alignRightB.addEventListener("click", () => {
     $(".bottom-txt").style.textAlign = "right"
 })
 
 //cambiar text color superior e inferior
-const changeTextColor= $("#txt-color")
-const changeBgdColor= $("#bgd-color")
+const changeTextColor = $("#txt-color")
+const changeBgdColor = $("#bgd-color")
 
-changeTextColor.addEventListener("input", ()=> {
+changeTextColor.addEventListener("input", () => {
     $(".top-txt").style.color = changeTextColor.value
 })
-changeTextColor.addEventListener("input", ()=> {
+changeTextColor.addEventListener("input", () => {
     $(".bottom-txt").style.color = changeTextColor.value
 })
 
 //cambiar color de fondo
 changeBgdColor.addEventListener("input", () => {
-    $(".top-txt").style.backgroundColor= changeBgdColor.value
+    $(".top-txt").style.backgroundColor = changeBgdColor.value
 })
 changeBgdColor.addEventListener("input", () => {
-    $(".bottom-txt").style.backgroundColor= changeBgdColor.value
+    $(".bottom-txt").style.backgroundColor = changeBgdColor.value
 })
 
+//sin fondo
+const noBgd = $("#WO-bgn")
+ noBgd.addEventListener("change", () => {
+    if (noBgd.checked) {
+        $(".top-txt").style.backgroundColor = "transparent"
+        $(".top-txt").style.position = "absolute"
+        $(".top-txt").style.top = "0"
+        $(".bottom-txt").style.backgroundColor = "transparent"
+        $(".bottom-txt").style.position = "absolute"
+        $(".bottom-txt").style.bottom = "0"
+    } else {
+        $(".top-txt").style.backgroundColor = `${changeBgdColor.value}`
+        $(".top-txt").style.position = "static"
+        $(".bottom-txt").style.backgroundColor = `${changeBgdColor.value}`
+        $(".bottom-txt").style.position = "static"
+    }
+})
+ 
