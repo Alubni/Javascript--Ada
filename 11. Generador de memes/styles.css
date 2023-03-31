@@ -22,7 +22,7 @@
   --color--downloadHover: #4e8ad8;
   --color--resetbtnbackground: rgb(180, 177, 177);
   --color--resetButtonHover: #e1e4de;
-
+  --color--closeBtn:rgb(255, 251, 251);
   
 
 }
@@ -39,7 +39,7 @@ body.dark {
  --color--downloadHover: #052044;
  --color--resetbtnbackground: rgb(41, 39, 39);
  --color--resetButtonHover: #373837;
-
+ --color--closeBtn:rgba(0, 0, 0, 0.2);
 
 }
  
@@ -274,7 +274,7 @@ h3{
   background-color: transparent;
   border: none;
   font-size: 1em;
-  color: rgba(0, 0, 0, 0.2);
+  color: var(--color--closeBtn);
   cursor: pointer;
 }
 
