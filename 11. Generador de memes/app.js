@@ -1,7 +1,7 @@
 
 const $ = (selector) => document.querySelector(selector);
 
-//boton imagen
+//boton imagen y texto
 const imageBtn = $(".imageBtn")
 const textBtn = $(".textBtn")
 
@@ -60,6 +60,8 @@ const invert = $("#invert")
 const updateImageFilters = () => {
     const filters = `brightness(${brightness.value}) opacity(${opacity.value}) contrast(${contrast.value}%) blur(${blur.value}px) grayscale(${grayscale.value}%) sepia(${sepia.value}%) hue-rotate(${hue.value}deg) saturate(${saturate.value}%) invert(${invert.value})`;
     $(".meme-image").style.filter = filters
+    $(".top-txt").style.zIndex = 1
+   
 }
 
 brightness.addEventListener("input", updateImageFilters)
@@ -142,6 +144,17 @@ const downloadMeme = () => {
 }
 
 $(".download-btn").addEventListener("click", downloadMeme)
+
+//boton de cerrar
+const closeTextAside= $("#close-txt-aside")
+const closeImageAside= $("#close-img-aside")
+
+closeTextAside.addEventListener("click", ()=> {
+    textAside.classList.add("display-none")
+})
+closeImageAside.addEventListener("click", ()=> {
+    imageAside.classList.add("display-none")
+})
 
 //seleccionar letra
 const changeFontTop = $("#font-select")
